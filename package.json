@@ -1,0 +1,33 @@
+{
+  "name": "electronrd",
+  "version": "1.0.0",
+  "description": "Paquete electron para aplicaciones de RD Sistemas",
+  "author": "Jhon Carlos Mendoza Betancourt",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "win": "electron-builder -w",
+    "mac": "electron-builder -m",
+    "linux": "electron-builder -l",
+    "build": "electorn-builder -wml"
+  },
+  "build": {
+    "appId": "com.rdsistemas.fronton",
+    "directories": {
+      "buildResources": "build"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {},
+    "linux": {
+      "category": "Network"
+    }
+  },
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.28.4"
+  },
+  "dependencies": {}
+}
